@@ -9,7 +9,7 @@ const brackets = (str) => {
         "}" : "{",
         "]" : "["
     }
-    const start = [ '(', '{', '[' ];
+    const start = "({[";
     const end = ")}]";
     let quoue = [];
         for(let i = 0; i < str.length; i++) {
