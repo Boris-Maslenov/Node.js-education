@@ -1,9 +1,7 @@
 const brackets = (str) => {
-
     if( typeof str !== 'string' || str.length < 2) {
         return false;
     } 
-    
     const map = {
         ")" : "(",
         "}" : "{",
@@ -26,7 +24,6 @@ const brackets = (str) => {
             }
         }
         return !quoue.length;
-    
-    }
+}
     
     module.exports = brackets;

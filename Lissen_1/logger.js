@@ -3,23 +3,18 @@ const fs = require('fs');
 const filePath = path.join(__dirname, 'logFn.txt'); 
 
 const logger = (fn) => (...args) => {
-    const resultFn = fn(...args);
-    const time = new Date();
-    const fnName = fn.name;
     const resultOb = {
-                time,
-                fnName,
-                resultFn,
+                resultFn: fn(...args),
+                time: new Date(),
+                fnName: fn.name,
             };      
     fs.appendFile(filePath, JSON.stringify(resultOb), (error) => {
         if (error) {
             throw error;
         }
     });
-    return resultFn;
+    return resultOb.resultFn;
 }
-
-
 
 // Пример: использования
 const sum = (a, b) => {
