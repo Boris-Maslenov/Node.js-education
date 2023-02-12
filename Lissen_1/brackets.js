@@ -19,8 +19,6 @@ const brackets = (str) => {
                 if(map[step] !== last) {
                     return false;
                 }
-            } else {
-                return false;
             }
         }
         return !quoue.length;
