@@ -24,4 +24,4 @@ const brackets = (str) => {
         return !quoue.length;
 }
     
-    module.exports = brackets;
+    module.exports = brackets; 
