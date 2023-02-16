@@ -16,6 +16,14 @@ function getHeaders(ext) {
     case 'gif':
         return {'Content-Type' : `image/${ext}`};    
     // add other ext-s....
+    case 'jpg' :
+    return {'Content-Type' : `application/x-javascript`};
+    case 'css' :
+        return {'Content-Type' : `text/css`};      
+    case 'woff2' :
+        return {'Content-Type' : `application/font-woff2`};   
+    case 'woff' :
+        return {'Content-Type' : `application/font-woff`};   
     default :
         return  {'Content-Type' : 'text/html'}; 
     }
