@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-server": "nodemon Lessen_2/index.js"
+    "start-server": "nodemon Lessen_2/index.js",
+    "start-serve-on-class":  "nodemon Lessen_2/server.js",
+    "test-serve-on-class":  "nodemon Lessen_2/test-server.js"
   },
   "keywords": [],
   "author": "",

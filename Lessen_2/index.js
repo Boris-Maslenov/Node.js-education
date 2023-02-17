@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+
 const FOLDER_PATH = 'public';
 const PORT = process.env.PORT || 3000;
 
