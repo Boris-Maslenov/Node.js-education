@@ -1,7 +1,6 @@
 const Server = require('./server');
 
 const serv = new Server(3001);
-serv.init();
 serv.start(); 
 serv.post('/materials', (req, res) => {
     console.log(req.body);
