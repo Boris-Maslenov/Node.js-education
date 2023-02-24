@@ -30,12 +30,12 @@ const server = net.createServer((socket) => {
           namesMap[id] = data.toString();
           // Уведомление всех о подключении нового участника чата:
           // Сформируем сообщение
-          const message = `${getTime()}: пользователь ${namesMap[id]} подключился к чату`;
+          const message = `=> ${getTime()}: пользователь ${namesMap[id]} подключился к чату`;
           // Разошлем всем участникам
           toAllMessage(message);
         } else {
             // Если пишет существующий клиент
-            const message = `${namesMap[id]} (${getTime()}) : ${data} `;
+            const message = `=> ${namesMap[id]} (${getTime()}) : ${data} `;
             toAllMessage(message);
         }
    });

@@ -5,25 +5,16 @@ const rl = readline.createInterface({ input, output });
 const socket = new net.Socket();
 
 socket.connect({ port: 2001, host: '127.0.0.1' }, () => {
-    addName();
+    writeMessage('Ваше имя: ');
 });
 
 socket.on('data', (data) => {
     console.log(data.toString());
-    addMessage();
+    writeMessage('Новое сообщение: ');
 });
 
-function addMessage() {
-    rl.question('Написать сообщение: ', (answer) => {
-        if( !answer.length ) {
-            throw new Error('Строка не может быть пустой');
-        }
-        socket.write(answer);
-    });
-}
-
-function addName(){
-    rl.question('Ваше имя: ', (answer) => {
+function writeMessage(message){
+    rl.question(message, (answer) => {
         if( !answer.length ) {
             throw new Error('Строка не может быть пустой');
         }
