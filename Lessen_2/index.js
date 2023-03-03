@@ -1,3 +1,6 @@
+require('dotenv').config();
+console.log(process.env.MY_URL);
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
