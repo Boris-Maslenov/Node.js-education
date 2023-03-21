@@ -10,7 +10,6 @@ app.use( cors() );
 app.use( express.json() );
 
 const DB_URL = process.env.DB_URL;
-
 const client = new MongoClient(DB_URL);
 async function startApp() {
     try {
@@ -23,7 +22,6 @@ async function startApp() {
         console.log(e);
     }
 }
-
 
 // routers
 
