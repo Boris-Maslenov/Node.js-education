@@ -7,7 +7,7 @@ let namesMap = {}; // { id : name }
 const toAllMessage = (data) => {
   const clientsCort = Object.entries(clientsMap);
   if ( clientsCort.length > 0 ) {
-      clientsCort.forEach( ([id, socket]) => {
+      clientsCort.forEach( ([_, socket]) => {
       socket.write(data);
    });
   }
