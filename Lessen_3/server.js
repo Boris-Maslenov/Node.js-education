@@ -1,7 +1,7 @@
 const net = require('node:net');
 
-let clientsMap = {}; // { id : socket }
-let namesMap = {}; // { id : name }
+let clientsMap = {}; ///{ id : socket }
+let namesMap = {}; /// { id : name }
 
 // Отправка сообщения для всеx участников чата:
 const toAllMessage = (data) => {
